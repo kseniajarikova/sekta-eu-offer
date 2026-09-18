@@ -32,10 +32,10 @@
     .btn-secondary:hover { color:var(--white); background:var(--ink); }
     .text-link { padding-bottom:3px; border-bottom:1px solid currentColor; color:var(--ink); font-size:14px; font-weight:800; text-decoration:none; }
     .text-link:hover { color:var(--rust); }
-    .hero-art { min-height:405px; position:relative; overflow:hidden; border:1px solid var(--ink); background:#e7e3d8; }
-    .hero-art:before { content:""; position:absolute; inset:0; opacity:.42; background:linear-gradient(90deg, transparent 49.8%, var(--ink) 50%, transparent 50.2%), linear-gradient(0deg, transparent 49.8%, var(--ink) 50%, transparent 50.2%); background-size:72px 72px; }
-    .hero-art:after { content:""; position:absolute; width:320px; height:320px; border:1px solid var(--moss); border-radius:50%; right:-78px; top:-66px; box-shadow:0 0 0 28px rgba(51,70,59,.06), 0 0 0 58px rgba(51,70,59,.05); }
-    .art-card { position:absolute; left:11%; right:11%; bottom:11%; padding:27px 29px 25px; background:rgba(251,250,246,.91); border-left:5px solid var(--rust); }
+    .hero-art { min-height:405px; position:relative; overflow:hidden; border:1px solid var(--line); background:rgba(251,250,246,.42); }
+    .hero-art:before { content:"EU × #SEKTA"; position:absolute; top:25px; right:27px; color:var(--muted); font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    .hero-art:after { content:"ПАУЗА"; position:absolute; left:8%; top:17%; color:rgba(51,70,59,.10); font-family:Georgia, "Times New Roman", serif; font-size:clamp(76px, 11vw, 150px); line-height:.8; letter-spacing:-.08em; }
+    .art-card { position:absolute; left:11%; right:11%; bottom:11%; padding:27px 29px 25px; background:rgba(251,250,246,.77); border-left:3px solid var(--rust); }
     .art-card strong { display:block; max-width:320px; font-family:Georgia, "Times New Roman", serif; font-size:37px; font-weight:400; line-height:1.02; letter-spacing:-.045em; }
     .art-card small { display:block; max-width:300px; margin-top:17px; color:var(--muted); font-size:14px; }
     .section { padding:80px 0; border-top:1px solid var(--line); }
@@ -43,18 +43,24 @@
     h2 { margin:0; font-family:Georgia, "Times New Roman", serif; font-size:clamp(32px, 4vw, 52px); font-weight:400; line-height:1; letter-spacing:-.05em; }
     .section-head p { align-self:end; max-width:450px; margin:0; color:var(--muted); font-size:17px; }
     .training-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--ink); }
-    .training { min-height:300px; display:flex; flex-direction:column; justify-content:space-between; padding:24px 25px 27px; border-bottom:1px solid var(--ink); background:rgba(251,250,246,.55); }
+    .training { min-height:300px; display:flex; flex-direction:column; border-bottom:1px solid var(--ink); background:rgba(251,250,246,.55); }
     .training + .training { border-left:1px solid var(--ink); }
-    .training:nth-child(2) { background:#e7ebe1; }
+    .training:nth-child(2) { background:rgba(231,235,225,.46); }
+    .training-media { display:block; position:relative; overflow:hidden; aspect-ratio:16 / 8.3; border-bottom:1px solid var(--ink); background:#e7e3d8; }
+    .training-media img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .35s ease, filter .35s ease; }
+    .training-media:hover img { transform:scale(1.025); filter:saturate(.86) contrast(.98); }
+    .training-media-label { position:absolute; left:17px; bottom:15px; padding:6px 9px; color:var(--ink); background:rgba(251,250,246,.86); font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+    .training-body { display:flex; flex:1; flex-direction:column; padding:24px 25px 27px; }
     .training-top { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; }
     .number { color:var(--rust); font-family:Georgia, "Times New Roman", serif; font-size:31px; line-height:1; }
     .duration { color:var(--muted); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
     .training h3 { margin:54px 0 10px; font-family:Georgia, "Times New Roman", serif; font-size:32px; font-weight:400; line-height:1; letter-spacing:-.04em; }
     .training p { max-width:470px; margin:0; color:#606159; }
     .training-meta { display:flex; flex-wrap:wrap; gap:9px 16px; margin-top:19px; color:var(--moss); font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
-    .training .btn { align-self:flex-start; margin-top:29px; }
+    .training-link { align-self:flex-start; margin-top:auto; padding-top:24px; color:var(--ink); font-size:14px; font-weight:800; text-decoration:none; }
+    .training-link span { color:var(--rust); }
     .offer { position:relative; overflow:hidden; padding:45px 42px 42px; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); background:var(--moss); color:var(--white); }
-    .offer:after { content:""; position:absolute; width:350px; height:350px; border:1px solid rgba(255,255,255,.34); border-radius:50%; right:-125px; top:-145px; box-shadow:0 0 0 24px rgba(255,255,255,.05), 0 0 0 50px rgba(255,255,255,.04); }
+    .offer:after { content:""; position:absolute; width:34%; height:1px; right:0; top:46px; background:rgba(255,255,255,.34); }
     .offer > * { position:relative; z-index:1; }
     .offer h2 { max-width:650px; }
     .offer p { max-width:650px; margin:17px 0 0; color:#dce2d7; font-size:18px; }
@@ -69,7 +75,7 @@
     .detail span { color:var(--muted); }
     .note { margin-top:28px; padding:16px 18px; border-left:3px solid var(--rust); color:#616159; background:#ebe8de; font-size:14px; }
     footer { padding:35px 0 55px; color:var(--muted); font-size:13px; }
-    @media (max-width:780px) { .wrap { width:min(100% - 30px, 620px); } .top { padding:18px 0 16px; } .tag { font-size:10px; text-align:right; } .hero { padding:52px 0 60px; grid-template-columns:1fr; gap:42px; } .hero-art { min-height:300px; } .art-card strong { font-size:30px; } .section { padding:58px 0; } .section-head { display:block; } .section-head p { margin-top:18px; } .training-grid,.details { grid-template-columns:1fr; } .training + .training { border-left:0; } .detail { border-right:0; border-bottom:1px solid var(--ink); } .detail:last-child { border-bottom:0; } .offer { padding:32px 23px; } .offer:after { width:240px; height:240px; right:-120px; top:-100px; } }
+    @media (max-width:780px) { .wrap { width:min(100% - 30px, 620px); } .top { padding:18px 0 16px; } .tag { font-size:10px; text-align:right; } .hero { padding:52px 0 60px; grid-template-columns:1fr; gap:42px; } .hero-art { min-height:300px; } .art-card strong { font-size:30px; } .section { padding:58px 0; } .section-head { display:block; } .section-head p { margin-top:18px; } .training-grid,.details { grid-template-columns:1fr; } .training + .training { border-left:0; } .training-media { aspect-ratio:16 / 8; } .detail { border-right:0; border-bottom:1px solid var(--ink); } .detail:last-child { border-bottom:0; } .offer { padding:32px 23px; } .offer:after { width:28%; top:36px; } }
   </style>
 </head>
 <body>
@@ -92,8 +98,8 @@
     <section class="wrap section" id="trainings">
       <div class="section-head"><h2>Попробуйте формат</h2><p>Выберите одну из тренировок или пройдите обе — в любом порядке. Ссылки ведут сразу на видео.</p></div>
       <div class="training-grid">
-        <article class="training"><div><div class="training-top"><div class="number">01</div><div class="duration">Fitness break · 6 минут</div></div><h3>Размяться, не вставая</h3><p>Мобильность таза, грудного отдела, плеч и шеи — прямо за рабочим столом, без оборудования и переодевания.</p><div class="training-meta"><span>сидя</span><span>без оборудования</span></div></div><a class="btn btn-secondary" href="https://kinescope.io/bAF6Qnp1wknULu4ZctPE2c" target="_blank" rel="noopener">Открыть тренировку <span aria-hidden="true">↗</span></a></article>
-        <article class="training"><div><div class="training-top"><div class="number">02</div><div class="duration">SuperHuman lvl3 · 7 минут</div></div><h3>Включить всё тело</h3><p>Короткая силовая тренировка стоя. Подойдут гантели или две бутылки воды — можно заниматься и без дополнительного веса.</p><div class="training-meta"><span>стоя</span><span>гантели / бутылки воды</span></div></div><a class="btn btn-secondary" href="https://kinescope.io/85dE94ZthLx21udMqyVLmK" target="_blank" rel="noopener">Открыть тренировку <span aria-hidden="true">↗</span></a></article>
+        <article class="training"><a class="training-media" href="https://kinescope.io/bAF6Qnp1wknULu4ZctPE2c" target="_blank" rel="noopener" aria-label="Открыть Fitness break"><img src="https://edge-ams-1.kinescopecdn.net/ca32f3d2-fe95-449e-b414-ec9cccdb6dce/posters/83011352-3a6e-44f2-b779-146363bc3c80/poster_lg/e9f43d11-a044-4df0-a9be-ee41b0a72899.jpg" alt="Заставка тренировки Fitness break"><span class="training-media-label">смотреть видео ↗</span></a><div class="training-body"><div class="training-top"><div class="number">01</div><div class="duration">Fitness break · 6 минут</div></div><h3>Размяться, не вставая</h3><p>Мобильность таза, грудного отдела, плеч и шеи — прямо за рабочим столом, без оборудования и переодевания.</p><div class="training-meta"><span>сидя</span><span>без оборудования</span></div><a class="training-link" href="https://kinescope.io/bAF6Qnp1wknULu4ZctPE2c" target="_blank" rel="noopener">Открыть тренировку <span aria-hidden="true">↗</span></a></div></article>
+        <article class="training"><a class="training-media" href="https://kinescope.io/85dE94ZthLx21udMqyVLmK" target="_blank" rel="noopener" aria-label="Открыть SuperHuman lvl3"><img src="https://edge-ams-1.kinescopecdn.net/ca32f3d2-fe95-449e-b414-ec9cccdb6dce/posters/ee21f59d-1092-4c81-b09b-78239122b055/poster_lg/263a9c33-0041-4ee8-9754-82363c413c7f.jpg" alt="Заставка тренировки SuperHuman level 3"><span class="training-media-label">смотреть видео ↗</span></a><div class="training-body"><div class="training-top"><div class="number">02</div><div class="duration">SuperHuman lvl3 · 7 минут</div></div><h3>Включить всё тело</h3><p>Короткая силовая тренировка стоя. Подойдут гантели или две бутылки воды — можно заниматься и без дополнительного веса.</p><div class="training-meta"><span>стоя</span><span>гантели / бутылки воды</span></div><a class="training-link" href="https://kinescope.io/85dE94ZthLx21udMqyVLmK" target="_blank" rel="noopener">Открыть тренировку <span aria-hidden="true">↗</span></a></div></article>
       </div>
       <div class="note"><strong>Небольшая подсказка:</strong> первую тренировку можно сделать прямо во время рабочего перерыва, вторую — когда есть немного больше пространства и хочется активнее включить тело.</div>
     </section>
