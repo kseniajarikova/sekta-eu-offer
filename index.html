@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Две короткие тренировки для выпускников ЕУ и специальное условие на продолжение занятий в #SEKTA.">
+  <title>Две тренировки для выпускников ЕУ · #SEKTA</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f45b69'/%3E%3Cpath d='M18 22h28M18 32h28M18 42h18' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root { --ink:#18222d; --muted:#64707d; --line:#dce2e8; --paper:#f7f8fa; --white:#fff; --coral:#f45b69; --coral-dark:#d94757; --yellow:#ffd66e; --blue:#dbeaf4; --shadow:0 18px 50px rgba(24,34,45,.10); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:16px; line-height:1.5; }
+    a { color:inherit; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:0 auto; }
+    .top { padding:22px 0; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.02em; }
+    .brand span { color:var(--coral); }
+    .tag { color:var(--muted); font-size:14px; }
+    .hero { padding:52px 0 28px; display:grid; grid-template-columns:1.05fr .95fr; gap:64px; align-items:center; }
+    .eyebrow { display:inline-flex; gap:8px; align-items:center; padding:7px 11px; border:1px solid #f3c4c8; border-radius:999px; background:#fff4f5; color:var(--coral-dark); font-weight:700; font-size:13px; }
+    h1 { margin:20px 0 16px; max-width:680px; font-size:clamp(40px, 6vw, 70px); line-height:.98; letter-spacing:-.055em; }
+    .lead { margin:0; max-width:590px; color:#46525e; font-size:20px; line-height:1.4; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:50px; padding:0 19px; border-radius:14px; font-weight:800; text-decoration:none; border:1px solid transparent; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; }
+    .btn:hover { transform:translateY(-2px); box-shadow:0 10px 22px rgba(24,34,45,.12); }
+    .btn-primary { background:var(--coral); color:white; }
+    .btn-primary:hover { background:var(--coral-dark); }
+    .btn-secondary { background:var(--white); border-color:var(--line); }
+    .hero-art { min-height:390px; border-radius:38px; background:linear-gradient(145deg,#ffe9a9 0%,#ffd66e 45%,#f5a18f 100%); position:relative; overflow:hidden; box-shadow:var(--shadow); }
+    .hero-art:before { content:""; position:absolute; width:340px; height:340px; border-radius:50%; background:rgba(255,255,255,.34); right:-90px; top:-110px; }
+    .hero-art:after { content:""; position:absolute; width:230px; height:230px; border:2px solid rgba(24,34,45,.17); border-radius:50%; left:-82px; bottom:-98px; }
+    .art-card { position:absolute; left:12%; right:12%; bottom:12%; padding:24px; border-radius:25px; background:rgba(255,255,255,.9); box-shadow:0 18px 36px rgba(130,79,34,.15); transform:rotate(-3deg); }
+    .art-card strong { display:block; font-size:31px; line-height:1.05; letter-spacing:-.04em; }
+    .art-card small { display:block; margin-top:12px; color:var(--muted); }
+    .section { padding:60px 0; }
+    .section-head { max-width:650px; margin-bottom:24px; }
+    h2 { margin:0 0 10px; font-size:clamp(28px, 4vw, 43px); line-height:1.05; letter-spacing:-.04em; }
+    .section-head p { margin:0; color:var(--muted); font-size:18px; }
+    .training-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .training { padding:20px; min-height:245px; display:flex; flex-direction:column; justify-content:space-between; border:1px solid var(--line); border-radius:24px; background:var(--white); box-shadow:0 8px 24px rgba(24,34,45,.04); }
+    .training:nth-child(2) { background:#e9f3f7; border-color:#c8dfe9; }
+    .training-top { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; }
+    .number { display:grid; place-items:center; width:44px; height:44px; border-radius:14px; background:var(--ink); color:#fff; font-weight:800; }
+    .duration { color:var(--muted); font-size:14px; font-weight:700; }
+    .training h3 { margin:22px 0 8px; font-size:25px; line-height:1.05; letter-spacing:-.03em; }
+    .training p { margin:0; color:var(--muted); }
+    .training .btn { align-self:flex-start; margin-top:24px; min-height:44px; padding:0 15px; font-size:14px; }
+    .offer { position:relative; overflow:hidden; padding:34px; border-radius:28px; background:var(--ink); color:white; }
+    .offer:after { content:""; position:absolute; width:260px; height:260px; border-radius:50%; border:32px solid rgba(255,214,110,.28); right:-80px; top:-70px; }
+    .offer > * { position:relative; z-index:1; }
+    .offer h2 { max-width:650px; }
+    .offer p { max-width:650px; margin:12px 0 0; color:#cbd4dc; font-size:18px; }
+    .coupon-row { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin-top:25px; }
+    .coupon { display:inline-flex; align-items:center; min-height:54px; padding:0 16px; border:1px dashed rgba(255,255,255,.55); border-radius:13px; background:rgba(255,255,255,.08); font-weight:900; letter-spacing:.12em; }
+    .offer .btn-primary { color:var(--ink); background:var(--yellow); }
+    .details { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:22px; }
+    .detail { padding:20px; border-radius:20px; background:var(--white); border:1px solid var(--line); }
+    .detail b { display:block; margin-bottom:6px; }
+    .detail span { color:var(--muted); }
+    .note { margin-top:26px; padding:15px 18px; border-left:4px solid var(--yellow); background:#fff9e8; border-radius:0 14px 14px 0; color:#5c4e25; }
+    footer { padding:34px 0 50px; color:var(--muted); font-size:14px; }
+    .modal { position:fixed; inset:0; display:none; place-items:center; padding:20px; background:rgba(24,34,45,.55); z-index:4; }
+    .modal.is-open { display:grid; }
+    .modal-card { width:min(480px,100%); padding:28px; border-radius:24px; background:white; box-shadow:var(--shadow); }
+    .modal-card h3 { margin:0 0 10px; font-size:25px; }
+    .modal-card p { margin:0 0 20px; color:var(--muted); }
+    @media (max-width:780px) { .wrap { width:min(100% - 28px, 620px); } .hero { padding-top:26px; grid-template-columns:1fr; gap:30px; } .hero-art { min-height:270px; } .art-card strong { font-size:26px; } .training-grid,.details { grid-template-columns:1fr; } .offer { padding:26px 22px; } .top { padding:17px 0; } .tag { display:none; } }
+  </style>
+</head>
+<body>
+  <header class="wrap top">
+    <div class="brand"><span>#</span>SEKTA</div>
+    <div class="tag">для выпускников ЕУ</div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">две тренировки · без регистрации</div>
+        <h1>Двигаться в течение рабочего дня — проще, чем кажется</h1>
+        <p class="lead">Попробуйте две короткие тренировки из офисного курса #SEKTA. Их можно включить между делами — дома, в офисе или в дороге.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#trainings">Выбрать тренировку <span aria-hidden="true">↓</span></a><a class="btn btn-secondary" href="#offer">Узнать об условиях</a></div>
+      </div>
+      <div class="hero-art" aria-label="Иллюстрация страницы с предложением для выпускников ЕУ" role="img"><div class="art-card"><strong>10–15 минут<br>для себя</strong><small>мягко включить тело в рабочий день</small></div></div>
+    </section>
+
+    <section class="wrap section" id="trainings">
+      <div class="section-head"><h2>Попробуйте формат</h2><p>Выберите одну из тренировок или пройдите обе — в любом порядке.</p></div>
+      <div class="training-grid">
+        <article class="training"><div><div class="training-top"><div class="number">01</div><div class="duration">10–15 минут</div></div><h3>Разбудить тело</h3><p>Небольшая последовательность, чтобы размяться и переключиться после нескольких часов за экраном.</p></div><button class="btn btn-secondary training-link" data-training="первой тренировки">Открыть тренировку <span aria-hidden="true">↗</span></button></article>
+        <article class="training"><div><div class="training-top"><div class="number">02</div><div class="duration">10–15 минут</div></div><h3>Снять напряжение</h3><p>Спокойный комплекс для шеи, плеч и спины — когда хочется вернуть ощущение лёгкости.</p></div><button class="btn btn-secondary training-link" data-training="второй тренировки">Открыть тренировку <span aria-hidden="true">↗</span></button></article>
+      </div>
+      <div class="note"><strong>Для команды:</strong> в рабочей версии замените кнопки выше на две реальные ссылки на видео/тренировки из офисного курса.</div>
+    </section>
+
+    <section class="wrap section" id="offer">
+      <div class="offer"><h2>Если понравится — можно продолжить</h2><p>Для выпускников ЕУ действует скидка 15% на любой комплексный или фокусный курс #SEKTA.</p><div class="coupon-row"><div class="coupon" aria-label="Промокод SEKTA4EU">SEKTA4EU</div><a class="btn btn-primary" href="https://sektaschool.ru/" target="_blank" rel="noopener">Посмотреть курсы <span aria-hidden="true">↗</span></a></div></div>
+      <div class="details"><div class="detail"><b>Скидка</b><span>15% на первый заказ по коду</span></div><div class="detail"><b>Срок</b><span>до 30 сентября 2026 года</span></div><div class="detail"><b>Как применить</b><span>введите код при оформлении курса</span></div></div>
+    </section>
+  </main>
+
+  <footer class="wrap">#SEKTA · онлайн-фитнес для жизни, в которой много всего</footer>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-card"><h3 id="modal-title">Ссылка на тренировку</h3><p id="modal-copy">В рабочей версии здесь откроется видео.</p><button class="btn btn-primary" id="close-modal">Понятно</button></div></div>
+  <script>
+    const modal = document.querySelector('#modal');
+    const copy = document.querySelector('#modal-copy');
+    document.querySelectorAll('.training-link').forEach((button) => button.addEventListener('click', () => { copy.textContent = `В рабочей версии здесь откроется ссылка на ${button.dataset.training}.`; modal.classList.add('is-open'); }));
+    document.querySelector('#close-modal').addEventListener('click', () => modal.classList.remove('is-open'));
+    modal.addEventListener('click', (event) => { if (event.target === modal) modal.classList.remove('is-open'); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') modal.classList.remove('is-open'); });
+  </script>
+</body>
+</html>
