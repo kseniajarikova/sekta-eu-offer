@@ -33,8 +33,8 @@
     .text-link { padding-bottom:3px; border-bottom:1px solid currentColor; color:var(--ink); font-size:14px; font-weight:800; text-decoration:none; }
     .text-link:hover { color:var(--rust); }
     .hero-art { min-height:405px; position:relative; overflow:hidden; border:1px solid var(--line); background:rgba(251,250,246,.42); }
-    .hero-art:before { content:"EU × #SEKTA"; position:absolute; top:25px; right:27px; color:var(--muted); font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
-    .hero-art:after { content:"РАЗМИНКА"; position:absolute; left:8%; top:17%; color:rgba(51,70,59,.10); font-family:Georgia, "Times New Roman", serif; font-size:clamp(62px, 9vw, 130px); line-height:.8; letter-spacing:-.08em; }
+    .hero-art:before { content:"ЕУ spb × #SEKTA"; position:absolute; top:25px; right:27px; color:var(--muted); font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    .hero-art:after { content:none; }
     .art-card { position:absolute; left:11%; right:11%; bottom:11%; padding:27px 29px 25px; background:rgba(251,250,246,.77); border-left:3px solid var(--rust); }
     .art-card strong { display:block; max-width:320px; font-family:Georgia, "Times New Roman", serif; font-size:37px; font-weight:400; line-height:1.02; letter-spacing:-.045em; }
     .art-card small { display:block; max-width:300px; margin-top:17px; color:var(--muted); font-size:14px; }
@@ -60,13 +60,14 @@
     .training-link { align-self:flex-start; margin-top:auto; padding-top:24px; color:var(--ink); font-size:14px; font-weight:800; text-decoration:none; }
     .training-link span { color:var(--rust); }
     .offer { position:relative; overflow:hidden; padding:30px 31px 29px; border:1px solid var(--moss); background:rgba(251,250,246,.46); color:var(--moss); }
-    .offer:after { content:""; position:absolute; width:27%; height:1px; right:0; top:39px; background:rgba(51,70,59,.30); }
+    .offer:after { content:none; }
     .offer > * { position:relative; z-index:1; }
     .offer .kicker { color:var(--moss); }
     .offer h2 { max-width:650px; }
     .offer p { max-width:650px; margin:13px 0 0; color:#62665c; font-size:17px; }
     .coupon-row { display:flex; align-items:center; flex-wrap:wrap; gap:18px; margin-top:29px; }
-    .coupon { display:inline-flex; align-items:center; min-height:48px; padding:0 15px; border:1px dashed var(--moss); background:rgba(51,70,59,.06); font-weight:900; letter-spacing:.14em; }
+    .coupon { display:inline-flex; align-items:center; min-height:48px; padding:0 15px; border:1px dashed var(--moss); background:rgba(51,70,59,.06); color:var(--moss); font:900 .9rem Inter, ui-sans-serif, system-ui, sans-serif; letter-spacing:.14em; cursor:pointer; transition:background .18s ease, color .18s ease; }
+    .coupon:hover, .coupon.is-copied { color:var(--white); background:var(--moss); }
     .offer .btn-primary { color:var(--white); background:var(--moss); border-color:var(--moss); }
     .offer .btn-primary:hover { color:var(--white); background:var(--ink); border-color:var(--ink); }
     .details { display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid var(--ink); }
@@ -75,25 +76,25 @@
     .detail b { display:block; margin-bottom:7px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
     .detail span { color:var(--muted); }
     .note { margin-top:28px; padding:16px 18px; border-left:3px solid var(--moss); color:var(--moss); background:rgba(51,70,59,.08); font-size:14px; }
-    footer { padding:35px 0 55px; color:var(--muted); font-size:13px; }
+    footer { padding:42px 0 55px; color:var(--muted); font-size:13px; text-align:center; }
+    footer strong { display:block; margin-bottom:8px; color:var(--ink); font-size:15px; letter-spacing:.05em; }
     @media (max-width:780px) { .wrap { width:min(100% - 30px, 620px); } .top { padding:18px 0 16px; } .tag { font-size:10px; text-align:right; } .hero { padding:52px 0 60px; grid-template-columns:1fr; gap:42px; } .hero-art { min-height:300px; } .art-card strong { font-size:30px; } .section { padding:58px 0; } .section-head { display:block; } .section-head p { margin-top:18px; } .training-grid,.details { grid-template-columns:1fr; } .training + .training { border-left:0; } .training-media { aspect-ratio:16 / 8; } .detail { border-right:0; border-bottom:1px solid var(--ink); } .detail:last-child { border-bottom:0; } .offer { padding:32px 23px; } .offer:after { width:28%; top:36px; } }
   </style>
 </head>
 <body>
   <header class="wrap top">
     <div class="brand"><span>#</span>SEKTA</div>
-    <div class="tag">сообщество выпускников EU СПб</div>
+    <div class="tag">сообщество выпускников ЕУ spb</div>
   </header>
 
   <main>
     <section class="wrap hero">
       <div>
-        <div class="eyebrow">EU СПб × онлайн-фитнес</div>
         <h1>Двигаться в течение дня, каким бы занятым он ни был</h1>
-        <p class="lead">В онлайн-школе фитнеса #SEKTA мы помогаем двигаться и заботиться о здоровье, даже когда день заполнен работой, учёбой и большими исследовательскими задачами.</p>
+        <p class="lead">В онлайн-школе фитнеса #SEKTA мы помогаем двигаться и заботиться о здоровье, даже когда день заполнен работой, учёбой и большими сложными задачами.</p>
         <div class="hero-actions"><a class="btn btn-primary" href="#trainings">Перейти к тренировкам <span aria-hidden="true">↓</span></a><a class="text-link" href="#offer">Узнать об условиях</a></div>
       </div>
-      <div class="hero-art" aria-label="Иллюстрация страницы с предложением для сообщества выпускников EU СПб" role="img"><div class="art-card"><strong>Разминка<br>до 10 минут</strong><small>две короткие тренировки — в любой одежде, без прыжков и специальной подготовки</small></div></div>
+      <div class="hero-art" aria-label="Иллюстрация страницы с предложением для сообщества выпускников ЕУ spb" role="img"><div class="art-card"><strong>Разминка<br>до 10 минут</strong><small>две короткие тренировки — в любой одежде, без прыжков и специальной подготовки</small></div></div>
     </section>
 
     <section class="wrap section" id="trainings">
@@ -102,15 +103,40 @@
         <article class="training"><a class="training-media" href="https://kinescope.io/bAF6Qnp1wknULu4ZctPE2c" target="_blank" rel="noopener" aria-label="Открыть Fitness break"><img src="https://edge-ams-1.kinescopecdn.net/ca32f3d2-fe95-449e-b414-ec9cccdb6dce/posters/83011352-3a6e-44f2-b779-146363bc3c80/poster_lg/e9f43d11-a044-4df0-a9be-ee41b0a72899.jpg" alt="Заставка тренировки Fitness break"><span class="training-media-label">смотреть видео ↗</span></a><div class="training-body"><div class="training-top"><div class="number">01</div><div class="duration">Fitness break · 6 минут</div></div><h3>Размяться, не вставая</h3><p>Мобильность таза, грудного отдела, плеч и шеи — прямо за рабочим столом, без оборудования и переодевания.</p><div class="training-meta"><span>сидя</span><span>без оборудования</span></div><a class="training-link" href="https://kinescope.io/bAF6Qnp1wknULu4ZctPE2c" target="_blank" rel="noopener">Открыть тренировку <span aria-hidden="true">↗</span></a></div></article>
         <article class="training"><a class="training-media" href="https://kinescope.io/85dE94ZthLx21udMqyVLmK" target="_blank" rel="noopener" aria-label="Открыть SuperHuman lvl3"><img src="https://edge-ams-1.kinescopecdn.net/ca32f3d2-fe95-449e-b414-ec9cccdb6dce/posters/ee21f59d-1092-4c81-b09b-78239122b055/poster_lg/263a9c33-0041-4ee8-9754-82363c413c7f.jpg" alt="Заставка тренировки SuperHuman level 3"><span class="training-media-label">смотреть видео ↗</span></a><div class="training-body"><div class="training-top"><div class="number">02</div><div class="duration">SuperHuman lvl3 · 7 минут</div></div><h3>Включить всё тело</h3><p>Короткая силовая тренировка стоя. Подойдут гантели или две бутылки воды — можно заниматься и без дополнительного веса.</p><div class="training-meta"><span>стоя</span><span>гантели / бутылки воды</span></div><a class="training-link" href="https://kinescope.io/85dE94ZthLx21udMqyVLmK" target="_blank" rel="noopener">Открыть тренировку <span aria-hidden="true">↗</span></a></div></article>
       </div>
-      <div class="note"><strong>Для выпускников EU СПб:</strong> если формат вам подойдёт, ниже есть специальное условие на продолжение занятий со скидкой 15%.</div>
+      <div class="note"><strong>Для выпускников ЕУ spb:</strong> если формат вам подойдёт, ниже есть специальное условие на продолжение занятий со скидкой 15%.</div>
     </section>
 
     <section class="wrap section" id="offer">
-      <div class="offer"><div class="kicker">специально для сообщества выпускников EU СПб</div><h2>15% на продолжение занятий</h2><p>Промокод действует на любой комплексный или фокусный курс онлайн-школы фитнеса #SEKTA до 31 декабря 2026 года включительно.</p><div class="coupon-row"><div class="coupon" aria-label="Промокод SEKTA4EU">SEKTA4EU</div><a class="btn btn-primary" href="https://sektaschool.ru/" target="_blank" rel="noopener">Посмотреть курсы <span aria-hidden="true">↗</span></a></div></div>
-      <div class="details"><div class="detail"><b>Скидка</b><span>15% на первый заказ по коду</span></div><div class="detail"><b>Срок</b><span>до 31 декабря 2026 года включительно</span></div><div class="detail"><b>Как применить</b><span>введите код при оформлении курса</span></div></div>
+      <div class="offer"><div class="kicker">специально для сообщества выпускников ЕУ spb</div><h2>15% на продолжение занятий</h2><p>Промокод действует на любой комплексный или фокусный курс онлайн-школы фитнеса #SEKTA до 31 декабря 2026 года включительно.</p><div class="coupon-row"><button class="coupon" id="coupon" type="button" data-code="SEKTA4EU" aria-label="Скопировать промокод SEKTA4EU" title="Скопировать промокод">SEKTA4EU</button><a class="btn btn-primary" href="https://sektaschool.ru/" target="_blank" rel="noopener">Посмотреть курсы <span aria-hidden="true">↗</span></a></div></div>
+      <div class="details"><div class="detail"><b>Скидка</b><span>15% на первую покупку по коду</span></div><div class="detail"><b>Срок</b><span>до 31 декабря 2026 года включительно</span></div><div class="detail"><b>Как применить</b><span>введите код SEKTA4EU при оформлении на сайте</span></div></div>
     </section>
   </main>
 
-  <footer class="wrap">#SEKTA · онлайн-фитнес для жизни, в которой много всего</footer>
+  <footer class="wrap"><strong>#SEKTA</strong><span>онлайн-фитнес для жизни, в которой много всего</span></footer>
+  <script>
+    const coupon = document.querySelector('#coupon');
+    coupon.addEventListener('click', async () => {
+      const code = coupon.dataset.code;
+      try {
+        await navigator.clipboard.writeText(code);
+      } catch {
+        const helper = document.createElement('textarea');
+        helper.value = code;
+        helper.setAttribute('readonly', '');
+        helper.style.position = 'fixed';
+        helper.style.opacity = '0';
+        document.body.appendChild(helper);
+        helper.select();
+        document.execCommand('copy');
+        helper.remove();
+      }
+      coupon.classList.add('is-copied');
+      coupon.textContent = 'Скопировано';
+      setTimeout(() => {
+        coupon.classList.remove('is-copied');
+        coupon.textContent = code;
+      }, 1800);
+    });
+  </script>
 </body>
 </html>
